@@ -1,6 +1,3 @@
-DROP SEQUENCE Lieferungen_Seq;
-DROP TABLE Lieferungen;
-
 CREATE SEQUENCE Lieferungen_Seq
 START WITH 1 
 INCREMENT BY 1;
@@ -15,7 +12,7 @@ CREATE TABLE Lieferungen (
 
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
-    ('Äpfel', 'Obst', 500, TO_DATE('2023-10-10', 'YYYY-MM-DD'));
+    ('Ã„pfel', 'Obst', 500, TO_DATE('2023-10-10', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
     ('Bananen', 'Obst', 400, TO_DATE('2023-10-10', 'YYYY-MM-DD'));
@@ -45,7 +42,7 @@ VALUES
     ('Milch', 'Milchprodukte', 200, TO_DATE('2023-10-10', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
-    ('Hühnereier', 'Milchprodukte', 400, TO_DATE('2023-10-10', 'YYYY-MM-DD'));
+    ('HÃ¼hnereier', 'Milchprodukte', 400, TO_DATE('2023-10-10', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
     ('Joghurt', 'Milchprodukte', 300, TO_DATE('2023-10-10', 'YYYY-MM-DD'));
@@ -57,7 +54,7 @@ VALUES
     ('Ananas', 'Obst', 100, TO_DATE('2023-10-10', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
-    ('Erdnüsse', 'Snacks', 300, TO_DATE('2023-10-10', 'YYYY-MM-DD'));
+    ('ErdnÃ¼sse', 'Snacks', 300, TO_DATE('2023-10-10', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
     ('Kiwi', 'Obst', 100, TO_DATE('2023-10-10', 'YYYY-MM-DD'));
@@ -66,7 +63,7 @@ VALUES
     ('Pfirsiche', 'Obst', 200, TO_DATE('2023-10-10', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
-    ('Erdbeermarmelade', 'Süßigkeiten', 150, TO_DATE('2023-10-10', 'YYYY-MM-DD'));
+    ('Erdbeermarmelade', 'SÃ¼ÃŸigkeiten', 150, TO_DATE('2023-10-10', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
     ('Pflaumen', 'Obst', 100, TO_DATE('2023-10-10', 'YYYY-MM-DD'));
@@ -88,9 +85,9 @@ VALUES
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
     ('Karotten', 'Gemuese', 150, TO_DATE('2023-10-10', 'YYYY-MM-DD'));
-    INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
+INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
-    ('Granatäpfel', 'Obst', 150, TO_DATE('2023-10-10', 'YYYY-MM-DD'));
+    ('GranatÃ¤pfel', 'Obst', 150, TO_DATE('2023-10-10', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
     ('Mangos', 'Obst', 100, TO_DATE('2023-10-10', 'YYYY-MM-DD'));
@@ -120,7 +117,7 @@ VALUES
     ('Brot', 'Nudeln und Getreide', 150, TO_DATE('2023-10-15', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
-    ('Tomatensoße', 'Gemuese', 200, TO_DATE('2023-10-15', 'YYYY-MM-DD'));
+    ('TomatensoÃŸe', 'Gemuese', 200, TO_DATE('2023-10-15', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
     ('Mehl', 'Nudeln und Getreide', 350, TO_DATE('2023-10-15', 'YYYY-MM-DD'));
@@ -132,7 +129,7 @@ VALUES
     ('Butter', 'Milchprodukte', 250, TO_DATE('2023-10-15', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
-    ('Käse', 'Milchprodukte', 200, TO_DATE('2023-10-15', 'YYYY-MM-DD'));
+    ('KÃ¤se', 'Milchprodukte', 200, TO_DATE('2023-10-15', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
     ('Schinken', 'Fleisch und Fisch', 150, TO_DATE('2023-10-15', 'YYYY-MM-DD'));
@@ -147,7 +144,7 @@ VALUES
     ('Erdnussbutter', 'Snacks', 250, TO_DATE('2023-10-15', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
-    ('Pfirsichmarmelade', 'Süßigkeiten', 100, TO_DATE('2023-10-15', 'YYYY-MM-DD'));
+    ('Pfirsichmarmelade', 'SÃ¼ÃŸigkeiten', 100, TO_DATE('2023-10-15', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
     ('Brokkoli', 'Gemuese', 200, TO_DATE('2023-10-15', 'YYYY-MM-DD'));
@@ -156,13 +153,13 @@ VALUES
     ('Spinat', 'Gemuese', 150, TO_DATE('2023-10-15', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
-    ('Müsli', 'Nudeln und Getreide', 100, TO_DATE('2023-10-15', 'YYYY-MM-DD'));
+    ('MÃ¼sli', 'Nudeln und Getreide', 100, TO_DATE('2023-10-15', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
     ('Kartoffelbrei', 'Gemuese', 150, TO_DATE('2023-10-15', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
-    ('Blaubeermarmelade', 'Süßigkeiten', 100, TO_DATE('2023-10-15', 'YYYY-MM-DD'));
+    ('Blaubeermarmelade', 'SÃ¼ÃŸigkeiten', 100, TO_DATE('2023-10-15', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
     ('Hummus', 'Snacks', 150, TO_DATE('2023-10-15', 'YYYY-MM-DD'));
@@ -204,7 +201,7 @@ VALUES
     ('Linsen', 'Nudeln und Getreide', 100, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
-    ('Hühnchenbrust', 'Fleisch und Fisch', 200, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
+    ('HÃ¼hnchenbrust', 'Fleisch und Fisch', 200, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
     ('Rinderhackfleisch', 'Fleisch und Fisch', 150, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
@@ -213,7 +210,7 @@ VALUES
     ('Lachsfilet', 'Fleisch und Fisch', 100, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
-    ('Hähnchenschenkel', 'Fleisch und Fisch', 300, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
+    ('HÃ¤hnchenschenkel', 'Fleisch und Fisch', 300, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
     ('Forellenfilet', 'Fleisch und Fisch', 100, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
@@ -231,10 +228,10 @@ VALUES
     ('Paprika', 'Gemuese', 200, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
-    ('Erdnüsse', 'Snacks', 300, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
+    ('ErdnÃ¼sse', 'Snacks', 300, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
-    ('Schokolade', 'Süßigkeiten', 400, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
+    ('Schokolade', 'SÃ¼ÃŸigkeiten', 400, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
     ('Kirschtomaten', 'Gemuese', 150, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
@@ -246,13 +243,13 @@ VALUES
     ('Studentenfutter', 'Snacks', 300, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
-    ('Avocadoöl', 'Öle', 100, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
+    ('AvocadoÃ¶l', 'Ã–le', 100, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
-    ('Erdnussöl', 'Öle', 150, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
+    ('ErdnussÃ¶l', 'Ã–le', 150, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
-    ('Kokosnussöl', 'Öle', 100, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
+    ('KokosnussÃ¶l', 'Ã–le', 100, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
     ('Tomatenmark', 'Gemuese', 200, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
@@ -273,45 +270,38 @@ VALUES
     ('Paprika', 'Gemuese', 100, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
-    ('Erdnüsse', 'Snacks', 200, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
+    ('ErdnÃ¼sse', 'Snacks', 200, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
     ('Anchovis', 'Fleisch und Fisch', 150, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
-    ('Räucherlachs', 'Fleisch und Fisch', 100, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
+    ('RÃ¤ucherlachs', 'Fleisch und Fisch', 100, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
 INSERT INTO Lieferungen (LebensmittelName, Lebensmittelgruppe, Menge, Lieferdatum)
 VALUES
     ('Champignons', 'Gemuese', 100, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
     
-SELECT * FROM lieferungen;
+-- Erstelle einen Index der am besten zu der Tabelle passt.
 
-SELECT * FROM lieferungen WHERE Lieferdatum = TO_DATE('2023-10-10', 'YYYY-MM-DD');
-SELECT * FROM lieferungen WHERE Lieferdatum = TO_DATE('2023-10-15', 'YYYY-MM-DD');
-SELECT * FROM lieferungen WHERE Lieferdatum = TO_DATE('2023-10-20', 'YYYY-MM-DD');
-
+-- Schreibe ein Statement, das die ersten fÃ¼nf Ergebnisse genau vor dem 20.10.2023(Sprich 5 ersten Ergebnisse der Lieferung vor dem 20.10.2023) ausgibt.
 SELECT *
 FROM Lieferungen
 WHERE Lieferdatum < TO_DATE('2023-10-20', 'YYYY-MM-DD')
 ORDER BY Lieferdatum DESC
 FETCH NEXT 5 ROWS ONLY;
-
-SELECT *
-FROM Lieferungen
-WHERE Lieferdatum < TO_DATE('2023-10-20', 'YYYY-MM-DD')
-ORDER BY Lieferdatum DESC
-FETCH FIRST 5 ROWS ONLY;
-
+    
+-- Schreibe ein Statement, das zehn Lieferungen ausgibt, die am 20.10.2023 angeliefert wurden und deren ID kleiner ist als 85 abwÃ¤rts also die IDs: 84, 83, 82,...
 SELECT *
 FROM (
     SELECT *
     FROM Lieferungen
     WHERE (Lieferdatum < TO_DATE('2023-10-20', 'YYYY-MM-DD')
-    OR (Lieferdatum = TO_DATE('2023-10-20', 'YYYY-MM-DD') AND LieferungsID < 10))
+    OR (Lieferdatum = TO_DATE('2023-10-20', 'YYYY-MM-DD') AND LieferungsID < 85))
     ORDER BY Lieferdatum DESC, LieferungsID DESC
 )
 WHERE ROWNUM <= 10;
 
+-- Schreibe ein Statement das die Rownums von 80 bis 71 ausgibt
 SELECT *
 FROM (
     SELECT Lieferungen.*,
@@ -323,17 +313,4 @@ FROM (
     ) Lieferungen
 )
 WHERE rn BETWEEN 11 AND 20
-ORDER BY Lieferdatum DESC, LieferungsID DESC;
-
-SELECT *
-FROM (
-    SELECT Lieferungen.*,
-           ROWNUM AS rn
-    FROM (
-        SELECT *
-        FROM Lieferungen
-        ORDER BY Lieferdatum DESC, LieferungsID DESC
-    ) Lieferungen
-)
-WHERE rn BETWEEN 21 AND 30
 ORDER BY Lieferdatum DESC, LieferungsID DESC;
