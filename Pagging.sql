@@ -282,6 +282,8 @@ VALUES
     ('Champignons', 'Gemuese', 100, TO_DATE('2023-10-20', 'YYYY-MM-DD'));
     
 -- Erstelle einen Index der am besten zu der Tabelle passt.
+CREATE INDEX Lieferungen_Index
+ON Lieferungen (LebensmittelName, Lebensmittelgruppe, Lieferdatum);
 
 -- Schreibe ein Statement, das die ersten fünf Ergebnisse genau vor dem 20.10.2023(Sprich 5 ersten Ergebnisse der Lieferung vor dem 20.10.2023) ausgibt.
 SELECT *
