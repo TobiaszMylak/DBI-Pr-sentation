@@ -21,6 +21,32 @@ SELECT * FROM Employees WHERE Salary IS NOT NULL;
 ## Aufgabe 2: NULL-Indizierung in Oracle
 
 **SQL-Abfragen:**
+```
+-- 1. Creating the "Products" Table
+CREATE TABLE Products (
+    ProductID NUMBER,
+    ProductName VARCHAR2(100) NOT NULL,
+    Price NUMBER
+);
+```
+
+``` 
+-- Inserting sample data into the "Products" table
+INSERT INTO Products (ProductID, ProductName, Price)
+VALUES (1, 'Product A', 10.99);
+
+INSERT INTO Products (ProductID, ProductName, Price)
+VALUES (2, 'Product B', 15.49);
+
+INSERT INTO Products (ProductID, ProductName, Price)
+VALUES (3, 'Product C', NULL); -- NULL price for Product C
+
+INSERT INTO Products (ProductID, ProductName, Price)
+VALUES (4, 'Product D', 7.99);
+
+INSERT INTO Products (ProductID, ProductName, Price)
+VALUES (5, 'Product E', NULL); -- NULL price for Product E
+```
 
 4. SQL-Abfrage zur Überprüfung der Nicht-Indizierung von NULL-Werten in Oracle:
 -- Erstelle einen Index auf der Spalte "Price"
@@ -49,7 +75,7 @@ SELECT * FROM Products WHERE Price IS NULL;
 
 **SQL-Abfragen:**
 
-6. Versuch, eine Zeile ohne Wert für die "CustomerName"-Spalte einzufügen:
+1. Versuch, eine Zeile ohne Wert für die "CustomerName"-Spalte einzufügen:
 -- Dieser Befehl sollte einen Fehler auslösen, da die "CustomerName"-Spalte NOT NULL ist.
 ```
 INSERT INTO Customers (CustomerID, CustomerName, Email)
@@ -60,21 +86,49 @@ VALUES (1, NULL, 'kunde@example.com');
    - Fehlermeldung: "ORA-01400: Einfügen von NULL in ("IHR_SCHEMA"."CUSTOMERS"."CustomerName") nicht möglich"
 ```
 
-7. Erklärung des Fehlers:
+2. Erklärung des Fehlers:
    - Der Fehler tritt auf, weil die NOT NULL-Constraint-Anforderung verletzt wurde. Es wurde versucht, eine Zeile ohne Wert für die "CustomerName"-Spalte einzufügen, was aufgrund der Constraint nicht erlaubt ist.
 
 ## Aufgabe 4: Emulation von partiellen Indizes
 
 **SQL-Abfragen:**
+```
+-- 1. Creating the "Orders" Table
+CREATE TABLE Orders (
+    OrderID NUMBER,
+    CustomerID NUMBER,
+    OrderDate DATE,
+    Status VARCHAR2(50)
+);
+```
 
-8. SQL-Befehl zur Emulation eines partiellen Index für Bestellungen mit dem Status 'Versendet':
+```
+-- 2. Inserting Sample Data into the "Orders" Table
+INSERT INTO Orders (OrderID, CustomerID, OrderDate, Status)
+VALUES (1, 101, TO_DATE('2023-10-15', 'YYYY-MM-DD'), 'Shipped');
+
+INSERT INTO Orders (OrderID, CustomerID, OrderDate, Status)
+VALUES (2, 102, TO_DATE('2023-10-18', 'YYYY-MM-DD'), 'Processing');
+
+INSERT INTO Orders (OrderID, CustomerID, OrderDate, Status)
+VALUES (3, 103, TO_DATE('2023-10-20', 'YYYY-MM-DD'), 'Cancelled');
+
+INSERT INTO Orders (OrderID, CustomerID, OrderDate, Status)
+VALUES (4, 104, TO_DATE('2023-10-22', 'YYYY-MM-DD'), 'Shipped');
+
+INSERT INTO Orders (OrderID, CustomerID, OrderDate, Status)
+VALUES (5, 105, TO_DATE('2023-10-25', 'YYYY-MM-DD'), 'Processing');
+```
+
+
+1. SQL-Befehl zur Emulation eines partiellen Index für Bestellungen mit dem Status 'Versendet':
 -- Erstelle einen funktionsbasierten Index, der nur Zeilen mit dem Status 'Versendet' indiziert
 
 ```
 CREATE INDEX idx_versandte_bestellungen ON Orders (CASE WHEN Status = 'Versendet' THEN Status ELSE NULL END);
 ```
 
-9. SQL-Abfrage zum Überprüfen des funktionsbasierten Index:
+2. SQL-Abfrage zum Überprüfen des funktionsbasierten Index:
 -- Überprüfe, ob der funktionsbasierte Index nur Zeilen mit dem Status 'Versendet' enthält
 
 ```
