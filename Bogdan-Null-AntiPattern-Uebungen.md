@@ -151,7 +151,7 @@ CREATE TABLE Reisen (
 );
 ```
 
-2. Fügen Sie mindestens fünf Beispieldatensätze in die "ReiTravelsen"-Tabelle ein, wobei das "TravelDate" als VARCHAR2-Zeichenfolge gespeichert wird.
+2. Fügen Sie mindestens fünf Beispieldatensätze in die "Travel"-Tabelle ein, wobei das "TravelDate" als VARCHAR2-Zeichenfolge gespeichert wird.
 ```
 -- Beispiel 1: Gültiges Datum
 INSERT INTO Reisen (ReiseID, ReiseDatum, Reiseziel)
