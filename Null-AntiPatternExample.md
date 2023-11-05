@@ -56,9 +56,41 @@ In dieser Aufgabe werden Sie grundlegende Datenbankkonzepte und SQL-Operationen 
 
 4. Schreiben Sie SQL-Abfragen, um zu zeigen, dass Ihr funktionsbasierter Index nur Zeilen mit dem Status 'Versendet' enthält.
 
+### Anti-Pattern 5: Falsche Verwendung von Datums-Typen (Date Type Mismatch)
 
-## Bewertungskriterien
+1. Erstellen Sie eine Oracle-Tabelle namens "Travel" mit folgenden Spalten:
+   - `TravelID` (NUMBER)
+   - `TravelDate` (VARCHAR2)
+   - `Destination` (VARCHAR2)
+
+2. Fügen Sie mindestens fünf Beispieldatensätze in die "ReiTravelsen"-Tabelle ein, wobei das "TravelDate" als VARCHAR2-Zeichenfolge gespeichert wird.
+
+3. Schreiben Sie SQL-Abfragen, um die Probleme bei der Verwendung von VARCHAR2 zur Speicherung von Datumsangaben zu demonstrieren:
+   - Versuchen Sie, Datumsvergleiche oder -berechnungen auf der "TravelDate"-Spalte durchzuführen.
+   - Zeigen Sie, wie ungültige Datumsangaben eingefügt werden können.
+
+4. Diskutieren Sie die Probleme im Zusammenhang mit der Speicherung von Datumsangaben als VARCHAR2-Zeichenfolgen und schlagen Sie eine Lösung vor.
+
+### Anti-Pattern 6: Speicherung numerischer Werte als Zeichenketten (Storing Numeric Values as Strings)
+
+1. Erstellen Sie eine Oracle-Tabelle namens "Sales" mit folgenden Spalten:
+   - `SalesID` (NUMBER)
+   - `SalesAmount` (VARCHAR2)
+   - `Product` (VARCHAR2)
+
+2. Fügen Sie mindestens fünf Beispieldatensätze in die "Sales"-Tabelle ein, wobei der "SalesAmount" als VARCHAR2-Zeichenfolge gespeichert wird.
+
+3. Schreiben Sie SQL-Abfragen, um die Probleme bei der Verwendung von VARCHAR2 zur Speicherung von numerischen Werten zu demonstrieren:
+   - Versuchen Sie, arithmetische Operationen (z. B. Addition) auf der "SalesAmount"-Spalte durchzuführen.
+   - Zeigen Sie, wie Nicht-Zahlenwerte in dieser Spalte gespeichert werden können.
+
+4. Diskutieren Sie die Probleme im Zusammenhang mit der Speicherung von numerischen Werten als VARCHAR2-Zeichenfolgen und schlagen Sie eine Lösung vor.
+
+
+## Zusammenfassung
 - Aufgabe 1: Verständnis von NULL-Werten 
 - Aufgabe 2: NULL-Indizierung in Oracle 
 - Aufgabe 3: Implementierung von NOT NULL-Constraints 
 - Aufgabe 4: Emulation von partiellen Indizes 
+- Aufgabe 5: Anti-Pattern - Falsche Verwendung von Datums-Typen (Date Type Mismatch)
+- Aufgabe 6: Anti-Pattern - Speicherung numerischer Werte als Zeichenketten (Storing Numeric Values as Strings)
